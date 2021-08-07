@@ -1,0 +1,46 @@
+# config
+window_name
+window_size
+pixel_shader_path
+
+# shader data
+iterations
+samples
+camera_position
+camera_rotation
+sensitivity
+fov
+
+# textures
+texture_sky_path
+texture_1_path
+texture_2_path
+texture_3_path
+texture_4_path
+texture_5_path
+# only 5 textures available
+
+# imported models
+object_0 
+object_1 
+object_2 
+object_3 
+object_4 
+object_5 
+object_(...)
+
+# object
+obj_id
+texture_albedo
+texture_specular
+texture_emission
+position
+rotation
+size
+albedo
+specular
+emission
+smoothness
+refractive_index
+transparency
+type

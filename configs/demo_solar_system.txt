@@ -1,0 +1,96 @@
+# config
+window_name Ray Tracing
+window_size 1024 512
+pixel_shader_path shaders/ray_tracing/RayTracing.compute
+object_shader_path 
+
+# shader data
+reflections 15
+samples 20
+camera_position -92 3 -145
+camera_rotation -2 -10 0 
+sensitivity 10
+fov 40
+
+# textures
+texture_sky_path assets/textures/m_way2.hdr
+texture_1_path assets/textures/8k_earth_nightmap.jpg
+texture_2_path assets/textures/8k_moon.jpg
+texture_3_path assets/textures/8k_mars.jpg
+texture_4_path assets/textures/8k_earth_daymap.jpg
+texture_5_path assets/textures/8k_venus_surface.jpg
+
+# imported models
+object_1 assets/objects/plane.obj
+object_2 assets/objects/cube.obj
+object_3 assets/objects/cubeUV.obj
+
+# earth
+model
+texture_albedo 4
+texture_specular 0
+texture_emission 1
+position -100 0 -120
+rotation 0 0 0
+size 5 5 5
+albedo 1 1 1
+specular 0 0 0
+emission 0.05 0.05 0.05
+smoothness 1
+type sphere
+
+# venus
+model
+texture_albedo 5
+texture_specular 0
+texture_emission 0
+position 30 0 -20
+rotation 0 0 0
+size 3 3 3
+albedo 1 1 1
+specular 0 0 0
+emission 0 0 0
+smoothness 1
+type sphere
+
+# moon
+model
+texture_albedo 2
+texture_specular 0
+texture_emission 0
+position -100 10 -80
+rotation 0 -45 0
+size 2 2 2
+albedo 1 1 1
+specular 0.01 0.01 0.01
+emission 0 0 0
+smoothness 0.3
+type sphere
+
+
+# mars
+model
+texture_albedo 3
+texture_specular 0
+texture_emission 0
+position -30 0 200
+rotation 0 -45 0
+size 7 7 7
+albedo 1 1 1
+specular 0 0 0
+emission 0 0 0
+transparency 0
+type sphere
+
+# sun
+model
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 0 0 0
+rotation 0 0 0
+size 2 2 2
+albedo 1 1 1
+specular 1 1 1
+emission 2000 1200 800
+type sphere

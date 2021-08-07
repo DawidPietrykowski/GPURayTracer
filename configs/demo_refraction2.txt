@@ -1,0 +1,69 @@
+# config
+window_name Ray Tracing Refraction Demo 2
+window_size 512 512
+pixel_shader_path shaders/ray_tracing/RayTracing.compute 
+
+# shader data
+reflections 12
+samples 1
+camera_position -20 10 -50
+camera_rotation -3 -22 0 
+sensitivity 10
+fov 40
+
+# textures
+texture_sky_path assets/textures/kiara_1_dawn_4k.hdr
+texture_2_path assets/textures/grid.jpg
+
+# imported models
+object_1 assets/objects/plane.obj
+object_2 assets/objects/cube.obj
+object_3 assets/objects/disco.obj
+
+# transparent sphere mesh
+model
+obj_id 3
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 0 3.5 0
+rotation 0 0 0
+size 2 2 2
+albedo 0 0 0
+specular 1 1 1
+emission 0 0 0
+smoothness 1
+refractive_index 1.8
+transparency 1
+type 2
+
+# transparent sphere mesh
+model
+obj_id 2
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 0 0 0
+rotation 0 0 0
+size 8 8 8
+albedo 0 0 0
+specular 1 1 1
+emission 0 0 0
+smoothness 1
+refractive_index 1.6
+transparency 1
+type 2
+
+# plane
+model
+obj_id 1
+texture_albedo 2
+texture_specular 2
+texture_emission 0
+position -50 0 0
+rotation 0 0 90
+size 1 50 50
+albedo 1 1 1
+specular 0.1 0.1 0.1
+emission 0 0 0
+smoothness 1

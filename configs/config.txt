@@ -1,0 +1,87 @@
+# config
+window_name Ray Tracing
+window_size 1024 512
+pixel_shader_path shaders/ray_tracing/RayTracing.compute
+object_shader_path 
+
+# shader data
+reflections 15
+samples 1
+camera_position 20 10 -40
+camera_rotation -7 22 0 
+sensitivity 10
+fov 40
+
+# textures
+texture_sky_path assets/textures/kiara_1_dawn_4k.hdr
+texture_2_path assets/textures/grid.jpg
+texture_3_path assets/textures/moon.jpg
+
+# imported models
+object_1 assets/objects/plane.obj
+object_2 assets/objects/cube.obj
+object_3 assets/objects/cubeUV.obj
+
+# transparent cube 1
+model
+obj_id 2
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 0 0 0
+rotation 0 90 0
+size 5 5 5
+albedo 0 0 0
+specular 1 1 1
+emission 0 0 0
+smoothness 1
+refractive_index 1.1
+transparency 0.9
+type 2
+
+# transparent cube 2
+model
+obj_id 3
+texture_albedo 0
+texture_specular 3
+texture_emission 3
+position -22.5 0 0
+rotation 0 90 0
+size 20 20 20
+albedo 0 0 0
+specular 5 5 5
+emission 1 1 1
+smoothness 1
+refractive_index 1
+transparency 1
+type 2
+
+# transparent sphere
+model
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 22.5 5 0
+rotation 0 90 0
+size 5 5 5
+albedo 0 0 0
+specular 1 1 1
+emission 0 0 0
+smoothness 0.9
+refractive_index 1.5
+transparency 0.99
+type sphere
+
+# plane
+model
+obj_id 1
+texture_albedo 2
+texture_specular 2
+texture_emission 0
+position -50 0 0
+rotation 0 0 90
+size 1 50 50
+albedo 1 1 1
+specular 0.1 0.1 0.1
+emission 0 0 0
+smoothness 1

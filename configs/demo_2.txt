@@ -1,0 +1,147 @@
+# config
+window_name Ray Tracing Refraction Demo 1
+window_size 512 512
+pixel_shader_path shaders/ray_tracing/RayTracing.compute
+
+# shader data
+reflections 10
+samples 1
+camera_position 30 10 -30
+camera_rotation -6 37.5 0
+sensitivity 10
+fov 40
+
+# textures
+texture_sky_path assets/textures/kiara_1_dawn_4k.hdr
+texture_1_path assets/textures/square_floor.png
+texture_2_path assets/textures/grid.jpg
+texture_3_path assets/objects/fox/texture.png
+
+# imported models
+object_0 assets/objects/cube.obj
+object_1 assets/objects/plane.obj
+object_2 assets/objects/cT.obj
+object_3 assets/objects/disco.obj
+object_4 assets/objects/Tri2.obj
+object_5 assets/objects/bunny1.obj
+object_6 assets/objects/cubeUV.obj
+
+# bunny
+model
+obj_id 5
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 5 0 13
+rotation 0 -120 0
+size 2 2 2
+albedo 0 0 0
+specular 0.988 0.76 0.364
+emission 0 0 0
+smoothness 0.7
+type 2
+
+# glowing triangle
+model
+obj_id 4
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position -5 20 -5
+rotation 0 45 90
+size 30 30 30
+albedo 0.1 0.1 0.1
+specular 0.5 0.5 0.5
+emission 5 5 5
+smoothness 0.2
+
+# pyramid blue
+model
+obj_id 2
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 8 0 -10
+rotation 0 15 0
+size 2 1 2
+albedo 0.1 0.1 0.1
+specular 0 0 1
+emission 0 0 0
+smoothness 0.8
+
+# pyramid red
+model
+obj_id 2
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 15 0 -5
+rotation 0 0 0
+size 2 2 2
+albedo 0.1 0.1 0.1
+specular 1 0 0
+emission 0 0 0
+smoothness 0.8
+
+# pink glass rectangle
+model
+obj_id 0
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position -2 0.25 -2
+rotation 0 0 0
+size 2 6 2
+albedo 0 0 0
+specular 1 0.4 0.8
+emission 0 0 0
+smoothness 0.99
+transparency 1
+refractive_index 1.8
+type 2
+
+# rectangle base
+model
+obj_id 6
+texture_albedo 2
+texture_specular 0
+texture_emission 0
+position -2 0 -2
+rotation 0 45 0
+size 20 0.5 20
+albedo 1 1 1
+specular 0 0 0
+emission 0 0 0
+smoothness 0.99
+transparency 0
+type 2
+
+# glass sphere
+model
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 10 3 0
+rotation 0 45 0
+size 3 3 3
+albedo 0 0 0
+specular 1 1 1
+emission 0 0 0
+smoothness 0.999
+refractive_index 1.5
+transparency 0.95
+type sphere
+
+# plane
+model
+texture_albedo 0
+texture_specular 0
+texture_emission 0
+position 0 0 0
+rotation 0 0 0
+size 5 5 5
+albedo 1 1 1
+specular 0 0 0
+emission 0 0 0
+smoothness 1
+type plane

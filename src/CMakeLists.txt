@@ -1,0 +1,10 @@
+target_sources(${PROJECT_NAME}
+PUBLIC
+main.cpp
+DataStructures.cpp
+DataStructures.h
+Utils.cpp
+Utils.h
+Config.cpp
+Config.h
+)
