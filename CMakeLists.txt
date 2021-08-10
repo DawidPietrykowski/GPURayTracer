@@ -39,6 +39,7 @@ macro(configure_files srcDir destDir)
 endmacro(configure_files)
 
 # Initialize project
+
 project(GPURayTracer)
 
 # Add executable
@@ -84,6 +85,7 @@ message(FATAL_ERROR "glfw3.lib not found")
 endif()
 
 # Find GLEW
+
 find_package(GLEW REQUIRED)
 
 if(GLEW_FOUND)
@@ -96,11 +98,13 @@ message(FATAL_ERROR "GLEW not found")
 endif()
 
 # Find OpenGL
+
 if(NOT WIN32)
     find_package(OpenGL REQUIRED)
 endif()
 
 # Find stb_image
+
 find_path(stb_image_INCLUDE_DIR stb_image.h 
 HINTS
 ${CMAKE_CURRENT_SOURCE_DIR}/include 
@@ -114,7 +118,7 @@ else()
 message(FATAL_ERROR "stb_image not found")
 endif()
 
-# Find stb_image
+# Find ComputeEngine
 
 find_path(ComputeEngine_LIB_DIR ComputeEngine.lib 
 HINTS
@@ -122,8 +126,9 @@ ${CMAKE_CURRENT_SOURCE_DIR}/include
 ${CMAKE_CURRENT_SOURCE_DIR}/lib 
 ${ComputeEngine_ROOT} 
 ${ComputeEngine_ROOT}/lib 
-${ComputeEngine_ROOT}/bin 
-${ComputeEngine_ROOT}/bin/x64/Release)
+${ComputeEngine_ROOT}/lib/Release
+${ComputeEngine_ROOT}/build/lib 
+${ComputeEngine_ROOT}/build/lib/Release)
 
 if(ComputeEngine_LIB_DIR)
 message(STATUS "ComputeEngine_LIB_DIR: ${ComputeEngine_LIB_DIR}")
@@ -131,28 +136,31 @@ else()
 message(FATAL_ERROR "ComputeEngine.lib not found")
 endif()
 
-
 find_path(ComputeEngine_INCLUDE_DIR ComputeEngine.h 
 HINTS 
 ${CMAKE_CURRENT_SOURCE_DIR}/include 
 ${CMAKE_CURRENT_SOURCE_DIR}/lib 
 ${ComputeEngine_ROOT} 
-${ComputeEngine_ROOT}/src)
+${ComputeEngine_ROOT}/include 
+${ComputeEngine_ROOT}/build/include)
 
 if(ComputeEngine_INCLUDE_DIR)
 message(STATUS "ComputeEngine_INCLUDE_DIR: ${ComputeEngine_INCLUDE_DIR}")
 else()
-message(FATAL_ERROR "ComputeEngine not found")
+message(FATAL_ERROR "ComputeEngine.h not found")
 endif()
 
 # Add source
+
 add_subdirectory(src)
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src
 ${GLFW_INCLUDE_DIR}
 ${OPENGL_INCLUDE_DIR}
 ${stb_image_INCLUDE_DIR}
 ${ComputeEngine_INCLUDE_DIR}
 ${GLEW_INCLUDE_DIR})
+
 target_link_directories(${PROJECT_NAME} PUBLIC ${GLFW_LIB_DIR} ${GLEW_LIBRARIES} ${ComputeEngine_LIB_DIR})
 target_link_libraries(${PROJECT_NAME} "glfw3.lib" "opengl32.lib" "glew32s.lib" "ComputeEngine.lib")
 

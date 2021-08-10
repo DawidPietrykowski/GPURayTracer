@@ -1,6 +1,7 @@
 #pragma once
 #include "DataStructures.h"
 #include "ComputeEngine.h"
+#include "Scene.h"
 
 class Config {
 public:

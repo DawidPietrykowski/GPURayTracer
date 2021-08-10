@@ -7,4 +7,6 @@ Utils.cpp
 Utils.h
 Config.cpp
 Config.h
+Scene.cpp
+Scene.h
 )

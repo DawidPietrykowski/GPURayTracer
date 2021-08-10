@@ -8,6 +8,7 @@
 #include "Utils.h"
 #include "DataStructures.h"
 #include "Config.h"
+#include "Scene.h"
 
 #define UPDATE_OBJECT_BUFFERS 0
 
