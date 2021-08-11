@@ -12,7 +12,7 @@ GPU Ray Tracing application based on my OpenGL Compute Engine.
 * [stb_image](https://github.com/nothings/stb)
 
 ## Binaries
-You can find the latest releases [here](https://github.com/DawidPietrykowski/HReader/releases)
+You can find the latest releases [here](https://github.com/DawidPietrykowski/GPURayTracer/releases)
 
 ## Build
 
