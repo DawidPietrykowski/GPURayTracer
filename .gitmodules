@@ -1,0 +1,3 @@
+[submodule "ComputeEngine"]
+	path = ComputeEngine
+	url = https://github.com/DawidPietrykowski/ComputeEngine

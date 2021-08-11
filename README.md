@@ -10,17 +10,19 @@ GPU Ray Tracing application based on my OpenGL Compute Engine.
 * GLFW
 * GLEW
 * [stb_image](https://github.com/nothings/stb)
-* [OpenGL Compute Engine](https://github.com/DawidPietrykowski/ComputeEngine)
 
 ## Build
 
-Specify these root directories for dependencies in [make.bat](make.bat) script:
-* GLFW_ROOT
-* GLEW_ROOT
-* stb_image_ROOT
-* ComputeEngine_ROOT
+* Clone this directory
+* Run git submodule init 
+* Run git submodule update 
+* Specify these root directories for dependencies in [make_all.bat](make_all.bat) script:
+    * GLFW_ROOT
+    * GLEW_ROOT
+    * stb_image_ROOT
 
-Run [make.bat](make.bat) script.
+* Run [make_all.bat](make_all.bat).
+* Run [build.bat](build.bat).
 
 ## Config files
 
