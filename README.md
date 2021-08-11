@@ -11,6 +11,9 @@ GPU Ray Tracing application based on my OpenGL Compute Engine.
 * GLEW
 * [stb_image](https://github.com/nothings/stb)
 
+## Binaries
+You can find the latest releases [here](https://github.com/DawidPietrykowski/HReader/releases)
+
 ## Build
 
 * Clone this directory
